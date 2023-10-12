@@ -2,21 +2,23 @@ from pydantic import BaseModel
 from typing import List, Any, Optional
 from datetime import date
 
-    
-class CategoryReq(BaseModel): 
+
+class CategoryReq(BaseModel):
     id: int
-    name: str 
+    name: str
     description: str
     date_added: date
-    
-class ReferenceReq(BaseModel): 
-     id: int
-     name: str 
-     description: str
-     date_added: date
-     categories: List[Any] = list()
-    
-class BookReq(BaseModel): 
+
+
+class ReferenceReq(BaseModel):
+    id: int
+    name: str
+    description: str
+    date_added: date
+    categories: List[Any] = list()
+
+
+class BookReq(BaseModel):
     id: int
     isbn: str
     author: str

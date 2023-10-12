@@ -1,11 +1,11 @@
 from typing import List, Any, Optional
 from models.data.gino_models import Profile_Trainers
 
-class ProfileTrainerListQuery: 
-    
-    def __init__(self): 
-        self._records:List[Profile_Trainers] = list()
-        
+
+class ProfileTrainerListQuery:
+    def __init__(self):
+        self._records: List[Profile_Trainers] = list()
+
     @property
     def records(self):
         return self._records
@@ -13,13 +13,12 @@ class ProfileTrainerListQuery:
     @records.setter
     def records(self, records):
         self._records = records
-        
 
-class ProfileTrainerRecordQuery: 
-    
-    def __init__(self): 
-        self._record:Profile_Trainers = None
-        
+
+class ProfileTrainerRecordQuery:
+    def __init__(self):
+        self._record: Profile_Trainers = None
+
     @property
     def record(self):
         return self._record
